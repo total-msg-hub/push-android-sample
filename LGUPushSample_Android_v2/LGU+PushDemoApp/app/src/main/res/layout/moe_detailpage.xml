@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+	<LinearLayout
+		android:id="@+id/detail_top"
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:background="@android:color/white"
+		android:gravity="center"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/detail_title"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_marginLeft="20dp"
+			android:layout_weight="1"
+			android:gravity="center_vertical"
+			android:text="@string/moe_detail_page"
+			android:textColor="@color/_222222"
+			android:textSize="20dp"
+			android:textStyle="bold" />
+
+		<LinearLayout
+			android:layout_width="60dp"
+			android:layout_height="match_parent"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onClickCloseBtn">
+
+			<ImageView
+				android:id="@+id/detail_close"
+				android:layout_width="18dp"
+				android:layout_height="18dp"
+				android:layout_gravity="center_vertical"
+				android:background="@drawable/close"
+				android:clickable="true"
+				android:gravity="center_vertical"
+				android:onClick="onClickCloseBtn" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/detail_img"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/detail_top"
+		android:layout_centerHorizontal="true"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="20dp"
+		android:clickable="true"
+		android:contentDescription="@string/moe_detail_image"
+		android:onClick="onShowDetailImage"
+		android:padding="1dp"
+		android:src="@drawable/ic_launcher"
+		android:visibility="gone" />
+
+	<WebView
+		android:id="@+id/detail_webview"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/detail_img"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="20dp"
+		android:background="@color/_D6D6D6"
+		android:clickable="true"
+		android:visibility="gone" />
+
+	<ScrollView
+		android:id="@+id/scrollview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/detail_webview"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="20dp"
+		android:background="@color/_F5F5F5"
+		android:scrollbarStyle="insideInset"
+		android:textColor="@color/_222222"
+		android:visibility="gone">
+
+		<TextView
+			android:id="@+id/detail_text"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="10dp"
+			android:autoLink="all"
+			android:background="@color/_F5F5F5"
+			android:padding="5dp"
+			android:textColor="@color/_222222"
+			android:textSize="16dp"
+			android:visibility="gone" />
+	</ScrollView>
+
+	<Button
+		android:visibility="gone"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/goto_video"
+		android:layout_width="230dp"
+		android:layout_height="46dp"
+		android:background="@drawable/round_box"
+		android:clickable="true"
+		android:layout_marginBottom="30dp"
+		android:layout_centerInParent="true"
+		android:text="@string/moe_view_html"
+		android:textColor="#ffffffff"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+</RelativeLayout>

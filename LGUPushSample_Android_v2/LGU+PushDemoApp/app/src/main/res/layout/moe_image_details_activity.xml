@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+	<LinearLayout
+		android:id="@+id/detail_top"
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/detail_title"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_weight="1"
+			android:background="@android:color/white"
+			android:gravity="center_vertical"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:text="@string/moe_detail_imageview"
+			android:textColor="@color/_222222"
+			android:textSize="20dp"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/detail_close"
+			android:layout_width="18dp"
+			android:layout_height="18dp"
+			android:layout_gravity="center_vertical"
+			android:layout_marginRight="15dp"
+			android:background="@drawable/close"
+			android:clickable="true"
+			android:gravity="center_vertical"
+			android:onClick="onClickCloseBtn" />
+	</LinearLayout>
+
+	<View
+		android:id="@+id/detail_border"
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_below="@id/detail_top"
+		android:background="#dedede" />
+
+	<com.uracle.cloudpush.view.TouchImageView
+		android:id="@+id/zoom_image"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/detail_border"
+		android:layout_gravity="center"
+		android:scaleType="fitCenter" />
+</RelativeLayout>

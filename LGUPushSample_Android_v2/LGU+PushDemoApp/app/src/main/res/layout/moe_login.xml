@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/main_layout"
+              android:background="@android:color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<View
+		android:layout_weight="0.3"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"/>
+	<View
+		android:layout_width="207dp"
+		android:layout_height="92dp"
+		android:layout_gravity="center_horizontal"
+
+		android:background="@drawable/logo" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.7" />
+
+	<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/Pantone_Transparent"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+
+		<com.reginald.editspinner.EditSpinner
+			android:layout_margin="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="46dp"
+			android:paddingLeft="10dp"
+
+			android:textColor="@android:color/black"
+			android:id="@+id/edit_spinner"
+			android:background="@color/_E6D6D6"
+			app:dropDownDrawable="@drawable/spinner_icon"
+			app:dropDownDrawableSpacing="10dp"
+			/>
+
+		<EditText
+			android:id="@+id/id"
+			android:layout_marginTop="10dp"
+            android:layout_width="230dp"
+            android:layout_height="46dp"
+            android:hint="@string/moe_your_id"
+			android:textColorHint="@color/_999999"
+			android:background="@drawable/input"
+            android:paddingLeft="10dp"
+            android:gravity="left|center_vertical"
+			android:maxLength="30"
+			android:singleLine="true"
+			android:textColor="#ff000000"
+			android:textSize="16sp" />
+
+		<EditText
+			android:textColorHint="@color/_999999"
+			android:id="@+id/pwd"
+            android:layout_width="230dp"
+            android:layout_height="46dp"
+			android:background="@drawable/input"
+            android:paddingLeft="10dp"
+            android:gravity="left|center_vertical"
+			android:hint="@string/moe_login_hint3"
+			android:inputType="text"
+            android:layout_marginTop="10dp"
+			android:maxLength="30"
+			android:singleLine="true"
+			android:textColor="#ff000000"
+			android:textSize="16sp" />
+
+		<Button
+            android:layout_marginTop="20dp"
+			android:id="@+id/login"
+			android:layout_width="230dp"
+			android:layout_height="46dp"
+			android:layout_marginBottom="60dp"
+			android:background="@drawable/round_box"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onLogin"
+			android:text="@string/moe_login"
+			android:textColor="#ffffffff"
+			android:textSize="16sp"
+			android:textStyle="bold" />
+	</LinearLayout>
+</LinearLayout>

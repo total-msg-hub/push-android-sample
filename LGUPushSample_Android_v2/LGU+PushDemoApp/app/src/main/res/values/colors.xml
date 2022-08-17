@@ -1,0 +1,21 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="listitem_div">#ffc2c7da</color>
+    <color name="Pantone_Transparent">#00000000</color>
+    <color name="LIST_0">#ffebebeb</color>
+    <color name="LIST_1">#ffffffff</color>
+    <color name="MENU_0">#ff28a0b4</color>
+    <color name="MENU_1">#ffdbdbdb</color>
+    <color name="GRAY">#ff999999</color>
+    <color name="TITLE">#FF2A3748</color>
+    <color name="BUTTON">#2528a0b4</color>
+    <color name="_223DA8">#223DA8</color>
+    <color name="_7990EA">#7990EA</color>
+    <color name="_F5F5F5">#F5F5F5</color>
+    <color name="_222222">#222222</color>
+    <color name="_999999">#999999</color>
+    <color name="_D6D6D6">#D6D6D6</color>
+    <color name="_E6D6D6">#E6D6D6</color>
+    <color name="colorPrimaryDark">#00000000</color>
+</resources>

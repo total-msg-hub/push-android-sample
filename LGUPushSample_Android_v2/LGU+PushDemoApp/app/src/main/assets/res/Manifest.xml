@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<push>
+		<receiver>
+
+			<app-id>LGU-SAMPLEAPP-00003</app-id>
+
+			<log>y</log>
+			<file-log>n</file-log>
+
+			<!-- UPMC 서버 버전 5.0-->
+			<version>5.0</version>
+
+			<!--UPMC 서버 URL-->
+			<server>https://upmc.msghub.uplus.co.kr/upmc</server>
+
+			<!-- 타임아웃 시간 -->
+			<timeout>20000</timeout>
+
+			<fcm-sender-id>117770874199</fcm-sender-id>
+
+			<android-push-type>FCM</android-push-type>
+
+			<!-- 브로드캐스트 리시버에서 퍼미션 사용 여부를 설정 (Y/N) -->
+			<use-permission>Y</use-permission>
+		</receiver>
+	</push>
+</settings>

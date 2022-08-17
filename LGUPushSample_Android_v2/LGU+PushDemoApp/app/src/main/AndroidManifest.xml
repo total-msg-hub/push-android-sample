@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.uracle.cloudpush"
+          android:versionCode="1"
+          android:versionName="1.0.0">
+
+	<application
+		android:name=".PushApplication"
+		android:allowBackup="false"
+		android:hardwareAccelerated="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme"
+		android:usesCleartextTraffic="true">
+		<activity
+			android:name=".IntroActivity"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".LoginActivity"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="adjustResize"></activity>
+		<activity
+			android:name=".PushListActivity"
+			android:configChanges="screenSize"
+			android:screenOrientation="portrait"></activity>
+		<activity
+			android:configChanges="screenSize"
+			android:name=".ImageDetailsActivity"
+			android:screenOrientation="portrait"></activity>
+		<activity
+			android:configChanges="screenSize"
+			android:name=".DetailActivity"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.DeviceDefault.DialogWhenLarge" />
+		<!-- =================== PUSH SERVICE SETTINGS START============= -->
+		<!-- FirebaseMessagingService 를 상속받아 구현 됨 -->
+		<service
+			android:name="m.client.push.library.service.FCMIntentService"
+			android:exported="false"
+			tools:ignore="Instantiatable">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<!-- 푸시 payload data 수신 class -->
+		<receiver android:name=".receiver.MessageArrivedReceiver">
+			<intent-filter>
+				<action android:name="${applicationId}.GCM_MESSAGE_ARRIVED" />
+			</intent-filter>
+		</receiver>
+		<!-- UPMC 서비스 등록 / 해제 등을 위한 class  -->
+		<receiver android:name="m.client.push.library.receiver.FcmActionReceiver">
+			<intent-filter>
+				<action android:name="${applicationId}.ACTION_GCM" />
+			</intent-filter>
+		</receiver>
+	</application>
+	<!-- 푸시 BroadCast 수신 권한 용 Permission -->
+	<permission
+		android:name="${applicationId}.permission.MPUSH_PERMISSION"
+		android:protectionLevel="signature" />
+	<uses-permission android:name="${applicationId}.permission.MPUSH_PERMISSION" />
+	<!-- 푸시 수신 후, screen on 을 위한 permission-->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- =================== PUSH SERVICE SETTINGS END ============= -->
+</manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LGU+ Demo III</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="moe_intro_logo_android">Intro Logo Image</string>
+    <string name="moe_copyright">2020 Uracle All Rights Reserved</string>
+    <string name="moe_service_reg_ing">서비스 등록중</string>
+    <string name="moe_phone">아이디</string>
+    <string name="moe_name">이  름</string>
+    <string name="moe_login">로그인</string>
+    <string name="moe_step_prev">이전버튼</string>
+	<string name="demo_id">DEMO</string>
+	<string name="demo_name">푸시 데모</string>
+    <string name="moe_login_id_save">  아이디저장</string>
+    <string name="moe_login_hint3">Name</string>
+	<string name="moe_project_id_hint">APP ID</string>
+	<string name="moe_your_id">Your ID</string>
+    <string name="moe_login_enter_pw">Name</string>
+    <string name="moe_messagebox">메시지함</string>
+    <string name="moe_messagebox_delete">삭제</string>
+    <string name="moe_messagebox_all_delete">전체삭제</string>
+	<string name="moe_view_video">동영상 보기</string>
+	<string name="moe_view_html">웹 페이지 보기</string>
+   
+	<string name="moe_detail_page">상세 보기</string>
+	<string name="moe_detail_image">푸시 이미지</string>
+	<string name="moe_detail_text">푸시 텍스트</string>
+	<string name="moe_alert_title">알림</string>
+	<string name="moe_alert_delete">선택한 메시지를 삭제하시겠습니까?</string>
+	<string name="moe_alert_delete_noselect">삭제할 메시지를 선택해주세요.</string>
+	<string name="moe_alert_logout">로그아웃 하면, 푸시 메세지를 수신 할 수 없습니다\n로그아웃 하시겠습니까?</string>
+	<string name="moe_detail_imageview">상세보기</string>
+	<string name="moe_login_fail">로그인에 실패하였습니다.</string>
+	<string name="moe_login_fail_1">잘못된 ID/PW입니다.</string>
+	<string name="moe_login_fail_2">유효한 부서정보가 없습니다.</string>
+	<string name="moe_login_fail_3">접속학교 정보 오류 또는 서비스 사용 불가입니다.</string>
+	<string name="moe_not_support_phone">CUID를 올 수 없습니다.</string>
+	<string name="moe_logout">로그아웃</string>
+	<string name="moe_change">UPMC 변경</string>
+	<string name="moe_zoom_out">글씨\n축소</string>
+	<string name="moe_zoom_in">글씨\n확대</string>
+
+	<string-array name="upmc">
+		<item>https://upmc.msghub.uplus.co.kr/upmc</item>
+		<item>https://upmc.msghub-qa.uplus.co.kr/upmc</item>
+		<item>https://upmc.msghub-dev.uplus.co.kr/upmc</item>
+	</string-array>
+
+</resources>

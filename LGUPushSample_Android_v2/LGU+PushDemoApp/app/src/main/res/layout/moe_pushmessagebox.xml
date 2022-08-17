@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/base"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+	<LinearLayout
+		android:id="@+id/top"
+		android:layout_width="fill_parent"
+		android:layout_height="120dp"
+		android:layout_alignParentTop="true"
+		android:background="@android:color/white"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="70dp"
+			android:orientation="horizontal"
+			>
+
+			<Button
+				android:background="@color/MENU_0"
+				android:id="@+id/change_upmc"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginLeft="5dip"
+
+				android:onClick="onClickChange"
+				android:text="@string/moe_change"
+				android:textColor="@android:color/white"
+				android:textSize="16dp"
+				android:textStyle="bold" />
+
+			<TextView
+
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_marginLeft="44dp"
+				android:gravity="center_vertical"
+				android:text="@string/moe_messagebox"
+				android:textColor="@color/_222222"
+				android:textSize="20.0sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_weight="1"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"/>
+			<LinearLayout
+				android:layout_width="80dp"
+				android:gravity="center"
+				android:layout_height="fill_parent"
+				android:layout_marginLeft="5dip"
+				android:onClick="onClickLogout"
+				android:orientation="horizontal">
+
+				<Button
+
+					android:id="@+id/logout"
+					android:layout_width="18dp"
+					android:layout_height="20dp"
+					android:layout_gravity="center"
+					android:layout_marginLeft="5dip"
+					android:background="@drawable/logout"
+					android:onClick="onClickLogout"
+					android:text="@string/moe_logout"
+					android:textColor="#ffffff"
+					android:textSize="14.0sp"
+					android:textStyle="bold" />
+			</LinearLayout>
+		</LinearLayout>
+		<TextView
+			android:id="@+id/tv_upmc_url"
+			android:background="@color/_E6D6D6"
+			android:paddingLeft="10dp"
+			android:textColor="@android:color/black"
+			android:text="UPMC"
+			android:textSize="16dp"
+			android:gravity="center_vertical"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"/>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dip"
+			android:background="#344886" />
+
+
+	</LinearLayout>
+
+	<View
+		android:id="@+id/line_top"
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_below="@id/top"
+		android:background="@color/_999999" />
+
+	<LinearLayout
+		android:id="@+id/alldeletelayout"
+		android:layout_width="fill_parent"
+		android:layout_height="56dip"
+		android:layout_below="@+id/line_top"
+		android:background="#ffffff"
+		android:gravity="center"
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:background="@color/_F5F5F5"
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:orientation="horizontal"
+			android:weightSum="1.0">
+
+			<ImageView
+				android:id="@+id/deleteBtn"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:layout_gravity="center"
+				android:layout_marginLeft="20dp"
+				android:background="@drawable/check_off"
+				android:clickable="true"
+				android:onClick="onClickAllDelete" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_marginLeft="10dp"
+				android:gravity="center_vertical"
+				android:text="@string/moe_messagebox_all_delete"
+				android:textColor="#344886"
+				android:textSize="16dp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+				android:layout_weight="1" />
+
+			<LinearLayout
+				android:id="@+id/editset"
+				android:layout_width="80dp"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:onClick="onClickDelete"
+				android:weightSum="1.0">
+
+				<View
+					android:id="@+id/preview2"
+					android:layout_width="17dp"
+					android:layout_height="20dp"
+					android:background="@drawable/delete"
+					android:clickable="true"
+					android:gravity="center"
+					android:onClick="onClickDelete"
+					android:text="@string/moe_messagebox_delete"
+					android:textColor="#ffffff"
+					android:textSize="14.0sp"
+					android:textStyle="bold" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/alldeletelayout"
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+
+			<View
+				android:id="@+id/line"
+				android:layout_width="match_parent"
+				android:layout_height="1px"
+				android:background="@color/_999999" />
+
+			<ListView
+				android:id="@+id/noticeListView"
+				android:layout_width="fill_parent"
+				android:layout_height="0.0dip"
+				android:layout_weight="1.0"
+				android:background="#ffffffff"
+				android:cacheColorHint="#00000000"
+				android:divider="#ffaaaaaa"
+				android:dividerHeight="1.0dip"
+				android:listSelector="#00000000"
+				android:transcriptMode="disabled" />
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="01dip"
+				android:background="#ffffffff" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
