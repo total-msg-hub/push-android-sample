@@ -16,7 +16,8 @@
 		<activity
 			android:name=".IntroActivity"
 			android:configChanges="orientation|keyboardHidden|screenSize"
-			android:screenOrientation="portrait">
+			android:screenOrientation="portrait"
+			android:exported="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
@@ -50,15 +51,18 @@
 			</intent-filter>
 		</service>
 		<!-- 푸시 payload data 수신 class -->
-		<receiver android:name=".receiver.MessageArrivedReceiver">
+		<receiver android:name=".receiver.MessageArrivedReceiver"
+			android:exported="false">
 			<intent-filter>
 				<action android:name="${applicationId}.GCM_MESSAGE_ARRIVED" />
 			</intent-filter>
 		</receiver>
 		<!-- UPMC 서비스 등록 / 해제 등을 위한 class  -->
-		<receiver android:name="m.client.push.library.receiver.FcmActionReceiver">
+		<receiver android:name="m.client.push.library.receiver.FcmActionReceiver"
+			android:exported="false">
 			<intent-filter>
 				<action android:name="${applicationId}.ACTION_GCM" />
+				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</receiver>
 	</application>

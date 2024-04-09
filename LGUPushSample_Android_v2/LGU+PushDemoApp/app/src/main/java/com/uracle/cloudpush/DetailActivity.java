@@ -243,7 +243,7 @@ public class DetailActivity extends Activity{
 		settings.setUseWideViewPort(true);
 		settings.setLoadWithOverviewMode(true);
 		settings.setDomStorageEnabled(true);
-		settings.setAppCacheEnabled(true);
+		//settings.setAppCacheEnabled(true);
 		settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 		
 //		mWebview.setWebViewClient(new MyWebViewClient());
